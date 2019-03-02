@@ -8,8 +8,6 @@ canonical_url: false
 description: "A few nights ago I was at home enjoying some quality Netflix time when my roommate Chris asked me if I was familiar with a show called “Holmes Inspection”. I said that I wasn’t, but that I was interested in checking it out. In case you’re unfamiliar, the show features Mike Holmes, an expert home inspector as he “shines a spotlight” on new homeowners facing massive repair bills and dangerous living conditions due to incompetence within the unregulated home inspection industry."
 ---
 
-# Community: The Code Inspector
-
 A few nights ago I was at home enjoying some quality Netflix time when my roommate Chris asked me if I was familiar with a show called “[Holmes Inspection](http://www.hgtv.ca/holmesinspection/)”. I said that I wasn’t, but that I was interested in checking it out. In case you’re unfamiliar, the show features Mike Holmes, an expert home inspector as he “shines a spotlight” on new homeowners facing massive repair bills and dangerous living conditions due to incompetence within the unregulated home inspection industry.
 
 10 minutes into the first episode, Mike had already found some serious flaws. The previous owners favored an open floor plan and had a load bearing wall removed. The contractors managed to not secure the new joist and somehow installed the support beam sideways severely compromising its integrity. As a result, the entire second floor dipped so much that all the doors would stick and a ball would roll to the same spot every time. To do a job this poorly the contractors either had very little experience or they simply ignored these issues.

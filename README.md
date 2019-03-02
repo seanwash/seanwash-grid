@@ -2,6 +2,8 @@
 
 > A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/50a572d2-fb36-40cb-b03d-dd773b1213bf/deploy-status)](https://app.netlify.com/sites/seanwash-grid/deploys)
+
 ## Features
 - Beautiful and simple design.
 - Markdown for content.

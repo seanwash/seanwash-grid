@@ -2,7 +2,7 @@
 title: Battling Disinterest and Distraction
 date: 2015-11-18
 published: true
-tags: ['Focus']
+tags: ['Introspection']
 canonical_url: false
 description: "Have you ever found yourself in a place where you’re having difficulty focusing on work and genuinely being interested in the work that you have in front of you?"
 ---

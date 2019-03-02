@@ -7,6 +7,7 @@
 module.exports = {
   siteName: 'Sean Washington',
   siteDescription: 'Hey there, I’m Sean. I’m currently leading the charge as CTO at Design Kollective.',
+  siteUrl: 'https://seanwash.com',
 
   plugins: [
     {
@@ -22,6 +23,19 @@ module.exports = {
             typeName: 'Tag',
             route: '/tag/:id',
             create: true
+          }
+        }
+      }
+    },
+
+    {
+      use: '@gridsome/plugin-sitemap',
+      options: {
+        cacheTime: 600000, // default
+        config: {
+          '/blog/*': {
+            changefreq: 'weekly',
+            priority: 0.5
           }
         }
       }

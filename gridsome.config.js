@@ -6,8 +6,9 @@
 
 module.exports = {
   siteName: 'Sean Washington',
-  siteDescription: 'Hey there, I’m Sean. I’m currently leading the charge as CTO at Design Kollective.',
+  siteDescription: 'Programmer in California. Co-host of Does Not Compute Podcast and CTO at Design Kollective. Interested in Elixir, PostgreSQL, and Vue.js.',
   siteUrl: 'https://seanwash.com',
+  titleTemplate: '%s',
 
   plugins: [
     {

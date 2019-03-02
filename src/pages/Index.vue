@@ -52,7 +52,7 @@ export default {
     PostCard
   },
   metaInfo: {
-    title: "Hello, world!"
+    title: "Sean Washington - Programmer in California."
   }
 };
 </script>

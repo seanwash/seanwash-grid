@@ -95,6 +95,19 @@ export default {
             url:
               'https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow?from_search=true',
           },
+          {
+            name: 'Shoe Dog by Phil Knight',
+            url: 'https://www.kobo.com/us/en/ebook/shoe-dog-1',
+          },
+          {
+            name: 'Elon Musk by Ashlee Vance',
+            url: 'https://www.kobo.com/us/en/ebook/elon-musk-1',
+          },
+          {
+            name: 'Astrophysics for People in a Hurry by Neil deGrasse Tyson',
+            url:
+              'https://www.kobo.com/us/en/ebook/astrophysics-for-people-in-a-hurry',
+          },
         ],
       },
     }

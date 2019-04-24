@@ -43,16 +43,16 @@
 </page-query>
 
 <script>
-import Author from "~/components/Author.vue";
-import PostCard from "~/components/PostCard.vue";
+import Author from '~/components/Author.vue'
+import PostCard from '~/components/PostCard.vue'
 
 export default {
   components: {
     Author,
-    PostCard
+    PostCard,
   },
   metaInfo: {
-    title: "Sean Washington - Programmer in California."
-  }
-};
+    title: 'Sean Washington - Programmer in California.',
+  },
+}
 </script>

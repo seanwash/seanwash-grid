@@ -1,6 +1,5 @@
 <template>
   <div class="author">
-
     <g-image
       alt="Author image"
       class="author__image"
@@ -10,22 +9,21 @@
       blur="5"
     />
 
-    <h1
-      v-if="showTitle"
-      class="author__site-title"
-    >
+    <h1 v-if="showTitle" class="author__site-title">
       {{ $static.metaData.siteName }}
     </h1>
 
     <p class="author__intro">
-      Co-host of <a href="//dnc.show">Does Not Compute</a>, CTO at <a href="//designkollective.com">Design Kollective</a>, regular human being.
+      Co-host of <a href="//dnc.show">Does Not Compute</a>, CTO at
+      <a href="//designkollective.com">Design Kollective</a>, regular human
+      being.
     </p>
 
     <p class="author__links">
+      <g-link to="/reading-list">Reading List</g-link>
       <a href="//twitter.com/seanwashbot">Follow on Twitter</a>
       <a href="//github.com/seanwash">GitHub</a>
     </p>
-
   </div>
 </template>
 
@@ -39,8 +37,8 @@ query {
 
 <script>
 export default {
-  props: ["showTitle"]
-};
+  props: ['showTitle'],
+}
 </script>
 
 <style lang="scss">

@@ -6,9 +6,10 @@
 
 module.exports = {
   siteName: 'Sean Washington',
-  siteDescription: 'Programmer in California. Co-host of Does Not Compute Podcast and CTO at Design Kollective. Interested in Elixir, PostgreSQL, and Vue.js.',
+  siteDescription:
+    'Programmer in California. Co-host of Does Not Compute Podcast and CTO at Design Kollective. Interested in Elixir, PostgreSQL, and Vue.js.',
   siteUrl: 'https://seanwash.com',
-  titleTemplate: '%s',
+  titleTemplate: '%s | Sean Washington',
 
   plugins: [
     {
@@ -23,10 +24,10 @@ module.exports = {
           tags: {
             typeName: 'Tag',
             route: 'blog/tags/:id',
-            create: true
-          }
-        }
-      }
+            create: true,
+          },
+        },
+      },
     },
 
     {
@@ -36,11 +37,11 @@ module.exports = {
         config: {
           '/blog/*': {
             changefreq: 'weekly',
-            priority: 0.5
-          }
-        }
-      }
-    }
+            priority: 0.5,
+          },
+        },
+      },
+    },
   ],
 
   transformers: {
@@ -49,9 +50,7 @@ module.exports = {
       externalLinksTarget: '_blank',
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
       anchorClassName: 'icon icon-link',
-      plugins: [
-        '@gridsome/remark-prismjs'
-      ]
-    }
+      plugins: ['@gridsome/remark-prismjs'],
+    },
   },
 }

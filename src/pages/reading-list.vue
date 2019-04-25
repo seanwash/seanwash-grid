@@ -88,7 +88,13 @@ export default {
               'https://www.goodreads.com/book/show/11878168-anything-you-want?from_search=true',
           },
         ],
-        inProgress: [],
+        inProgress: [
+          {
+            name: 'Mastering Modular JavaScript by Nicolas Bevacqua',
+            url:
+              'https://www.amazon.com/Mastering-Modular-JavaScript-Nicolas-Bevacqua/dp/1491955686',
+          },
+        ],
         toRead: [
           {
             name: 'Thinking, Fast and Slow by Daniel Kahneman',

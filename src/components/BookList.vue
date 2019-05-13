@@ -3,11 +3,8 @@
     <h3>{{ category }}</h3>
 
     <ul>
-      <li
-        v-for="book in books"
-        :key="book.name"
-      >
-        <a :href="book.url">{{ book.name }}</a>
+      <li v-for="{ node } in books" :key="node.title">
+        <a :href="node.url">{{ node.title }} by {{ node.author }}</a>
       </li>
     </ul>
   </div>

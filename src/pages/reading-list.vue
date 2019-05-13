@@ -12,20 +12,18 @@
         that it keeps going.
       </p>
 
-      <BookList
-        category="Finished"
-        :books="books.finished"
-      />
+      <BookList category="Finished" :books="$page.booksFinished.edges" />
 
       <BookList
-        v-if="books.inProgress.length"
+        v-if="$page.booksInProgress.edges.length"
         category="In Progress"
-        :books="books.inProgress"
+        :books="$page.booksInProgress.edges"
       />
 
       <BookList
+        v-if="$page.booksToRead.edges.length"
         category="To Read"
-        :books="books.toRead"
+        :books="$page.booksToRead.edges"
       />
 
       <h3>How I Read</h3>
@@ -40,7 +38,8 @@
         found that it had a pretty significant impact on the quality of my sleep
         and that I'd often get distracted by a push notification or another app.
         These days I'm reading on a
-        <a href="https://us.kobobooks.com/collections/ereaders">Kobo eReader</a>. I find that the display is much easier on my eyes, and since it's
+        <a href="https://us.kobobooks.com/collections/ereaders">Kobo eReader</a
+        >. I find that the display is much easier on my eyes, and since it's
         just an eReader I'm not tempted to drift off into Twitter or Reddit.
       </p>
     </div>
@@ -48,6 +47,46 @@
     <Author />
   </Layout>
 </template>
+
+<page-query>
+  query {
+    booksFinished: allBooks(
+      filter: { status: { eq: "finished"}}
+    ) {
+      edges {
+        node {
+          title
+          author
+          url
+        }
+      }
+    }
+
+    booksInProgress: allBooks(
+      filter: { status: { eq: "in_progress"}}
+    ) {
+      edges {
+        node {
+          title
+          author
+          url
+        }
+      }
+    }
+
+    booksToRead: allBooks(
+      filter: { status: { eq: "to_read"}}
+    ) {
+      edges {
+        node {
+          title
+          author
+          url
+        }
+      }
+    }
+  }
+</page-query>
 
 <script>
 import Author from '~/components/Author.vue'
@@ -66,56 +105,6 @@ export default {
   data() {
     return {
       title: 'My Reading List',
-      books: {
-        finished: [
-          {
-            name: 'Quiet by Susan Cain',
-            url:
-              'https://www.goodreads.com/book/show/8520610-quiet?ac=1&from_search=true',
-          },
-          {
-            name: 'The Power of Habit by Charles Duhigg',
-            url:
-              'https://www.goodreads.com/book/show/12609433-the-power-of-habit?from_search=true',
-          },
-          {
-            name: 'Imagine: How Creativity Works by Jonah Lehrer',
-            url: 'https://www.goodreads.com/book/show/12987640-imagine',
-          },
-          {
-            name: 'Anything You Want - Derek Sivers',
-            url:
-              'https://www.goodreads.com/book/show/11878168-anything-you-want?from_search=true',
-          },
-        ],
-        inProgress: [
-          {
-            name: 'Mastering Modular JavaScript by Nicolas Bevacqua',
-            url:
-              'https://www.amazon.com/Mastering-Modular-JavaScript-Nicolas-Bevacqua/dp/1491955686',
-          },
-        ],
-        toRead: [
-          {
-            name: 'Thinking, Fast and Slow by Daniel Kahneman',
-            url:
-              'https://www.goodreads.com/book/show/11468377-thinking-fast-and-slow?from_search=true',
-          },
-          {
-            name: 'Shoe Dog by Phil Knight',
-            url: 'https://www.kobo.com/us/en/ebook/shoe-dog-1',
-          },
-          {
-            name: 'Elon Musk by Ashlee Vance',
-            url: 'https://www.kobo.com/us/en/ebook/elon-musk-1',
-          },
-          {
-            name: 'Astrophysics for People in a Hurry by Neil deGrasse Tyson',
-            url:
-              'https://www.kobo.com/us/en/ebook/astrophysics-for-people-in-a-hurry',
-          },
-        ],
-      },
     }
   },
 }

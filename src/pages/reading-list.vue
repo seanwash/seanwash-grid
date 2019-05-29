@@ -6,7 +6,7 @@
 
     <div class="content-box">
       <p>
-        Reading is habit that I've always admired about others, but something
+        Reading is a habit that I've always admired about others, but something
         that I frequently lack the discipline to do. For me it seems to be about
         momentum, and this list is my attempt to steer that momentum in hopes
         that it keeps going.

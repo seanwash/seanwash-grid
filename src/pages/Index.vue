@@ -27,7 +27,7 @@
           name
           path
         }
-        published_at (format: "D. MMMM YYYY")
+        published_at (format: "D MMMM YYYY")
         excerpt
         ...on GhostPost {
             id

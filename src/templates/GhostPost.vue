@@ -12,8 +12,8 @@
       <div class="post__header">
         <g-image
           alt="Cover image"
-          v-if="$page.post.coverImage"
-          :src="$page.post.coverImage"
+          v-if="$page.post.feature_image"
+          :src="$page.post.feature_image"
         />
       </div>
 
@@ -59,6 +59,7 @@ export default {
       title
       path
       published_at (format: "D MMMM YYYY")
+      feature_image
       tags {
         id
         name

@@ -4,6 +4,9 @@
 // Changes here requires a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const GHOST_API_KEY = process.env.GRIDSOME_GHOST_API_KEY
+const GHOST_API_URL = process.env.GRIDSOME_GHOST_API_URL
+
 module.exports = {
   siteName: 'Sean Washington',
   siteDescription:
@@ -13,23 +16,15 @@ module.exports = {
 
   plugins: [
     {
-      // Create posts from markdown files
-      use: '@gridsome/source-filesystem',
+      use: '@gridsome/source-ghost',
       options: {
-        typeName: 'Post',
-        path: 'content/posts/*.md',
-        route: '/blog/:year/:month/:day/:slug',
-        refs: {
-          // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
-          tags: {
-            typeName: 'Tag',
-            route: 'blog/tags/:id',
-            create: true,
-          },
+        baseUrl: GHOST_API_URL,
+        contentKey: GHOST_API_KEY,
+        routes: {
+          post: '/blog/:year/:month/:day/:slug',
         },
       },
     },
-
     {
       use: '@gridsome/plugin-sitemap',
       options: {

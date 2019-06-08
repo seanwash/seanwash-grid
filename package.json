@@ -11,8 +11,9 @@
     "@gridsome/plugin-sitemap": "^0.1.1",
     "@gridsome/remark-prismjs": "^0.0.5",
     "@gridsome/source-filesystem": "^0.4.1",
+    "@gridsome/source-ghost": "^0.1.0",
     "@gridsome/transformer-remark": "^0.3.0",
-    "gridsome": "^0.6.0"
+    "gridsome": "^0.6"
   },
   "devDependencies": {
     "axios": "^0.18.0",

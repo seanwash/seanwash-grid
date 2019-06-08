@@ -8,3 +8,4 @@ dist
 .env.*
 webpack.config.js
 .idea/
+schema.graphql

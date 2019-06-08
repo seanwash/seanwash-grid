@@ -6,7 +6,6 @@
       </h1>
 
       <PostMeta :post="$page.post" />
-
     </div>
 
     <div class="post content-box">
@@ -18,14 +17,7 @@
         />
       </div>
 
-      <div
-        class="post__content"
-        v-html="$page.post.content"
-      />
-
-      <div class="post__footer">
-        <PostTags :post="$page.post" />
-      </div>
+      <div class="post__content" v-html="$page.post.html" />
     </div>
 
     <div class="post-comments">
@@ -37,46 +29,45 @@
 </template>
 
 <script>
-import PostMeta from "~/components/PostMeta";
-import PostTags from "~/components/PostTags";
-import Author from "~/components/Author.vue";
+import PostMeta from '~/components/PostMeta'
+import PostTags from '~/components/PostTags'
+import Author from '~/components/Author.vue'
 
 export default {
   components: {
     Author,
     PostMeta,
-    PostTags
+    PostTags,
   },
   metaInfo() {
     return {
       title: this.$page.post.title,
       meta: [
         {
-          name: "description",
-          content: this.$page.post.description
-        }
-      ]
-    };
-  }
-};
+          name: 'description',
+          content: this.$page.post.excerpt,
+        },
+      ],
+    }
+  },
+}
 </script>
 
 <page-query>
-query Post ($path: String!) {
-  post: post (path: $path) {
-    title
-    path
-    date (format: "D. MMMM YYYY")
-    timeToRead
-    tags {
-      id
+  query GhostPost ($path: String!) {
+    post: ghostPost (path: $path) {
       title
       path
+      published_at (format: "D MMMM YYYY")
+      tags {
+        id
+        name
+        path
+      }
+      excerpt
+      html
     }
-    description
-    content
   }
-}
 </page-query>
 
 <style lang="scss">

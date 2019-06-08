@@ -11,13 +11,12 @@
         :post="edge.node"
       />
     </div>
-
   </Layout>
 </template>
 
 <page-query>
 {
-  posts: allPost {
+  posts: allGhostPost(sortBy: "published_at", order: DESC) {
     edges {
       node {
         id
@@ -25,13 +24,12 @@
         path
         tags {
           id
-          title
+          name
           path
         }
-        date (format: "D. MMMM YYYY")
-        timeToRead
-        description
-        ...on Post {
+        published_at (format: "D. MMMM YYYY")
+        excerpt
+        ...on GhostPost {
             id
             title
             path
